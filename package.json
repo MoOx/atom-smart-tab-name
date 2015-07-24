@@ -1,0 +1,25 @@
+{
+  "name": "smart-tab-name",
+  "main": "./lib/main",
+  "version": "0.0.0",
+  "description": "Provide smart tab names",
+  "keywords": [
+    "tabs",
+    "tab",
+    "path",
+    "filename",
+    "name"
+  ],
+  "repository": "https://github.com/MoOx/atom-smart-tab-name",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+    "atom-simple-logger": "~0.0.1"
+  },
+  "dev-dependencies": {
+    "atom-package-reloader": "~0.0.2"
+  },
+  "devDependencies": {}
+}
