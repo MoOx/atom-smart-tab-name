@@ -10,11 +10,11 @@ you some context.
 
 ### One folder preview
 
-![screenshot](screenshots/one-folder.png)
+![screenshot](https://github.com/MoOx/atom-smart-tab-name/raw/master/screenshots/one-folder.png)
 
 ### Multiples folder preview
 
-![screenshot](screenshots/multiples-folders.png)
+![screenshot](https://github.com/MoOx/atom-smart-tab-name/raw/master/screenshots/multiples-folders.png)
 
 ## [CHANGELOG](CHANGELOG.md)
 
