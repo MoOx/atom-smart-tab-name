@@ -5,6 +5,7 @@
 Useful when you have some files with the same basename name.  
 Auto adjust paths if you have multiples folders in the same window to bring
 you some context.
+`index` filenames will be grayed.
 
 ## Preview
 

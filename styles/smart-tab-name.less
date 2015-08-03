@@ -4,9 +4,22 @@
 // for a full listing of what's available.
 @import "ui-variables";
 
-.smart-tab-name {
+/*.tab-bar .tab.active .title,*/
+.tab-bar .tab .title {
+  display: flex;
+}
 
+.tab-bar .tab .title::before, /* icons ? */
+.tab-bar .tab .title .smart-tab-name,
+.tab-bar .tab .title::after {
+  line-height: inherit;
+}
+
+.smart-tab-name {
+  flex: 1;
   display: inline-block;
+  direction: rtl;
+  -webkit-mask: linear-gradient(to right, rgba(0, 0, 0, 0), #000000 1em) no-repeat;
 }
 
   .smart-tab-name .index-filename {
