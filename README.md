@@ -1,4 +1,4 @@
-# smart-tab-name
+# [smart-tab-name](https://atom.io/packages/smart-tab-name)
 
 > Provide smarter tab names form Atom editor.
 
