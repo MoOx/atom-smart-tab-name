@@ -1,7 +1,7 @@
 {
   "name": "smart-tab-name",
   "main": "./lib/main",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provide smart tab names",
   "keywords": [
     "tabs",
