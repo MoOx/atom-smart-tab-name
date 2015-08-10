@@ -26,14 +26,22 @@ parsePath = (path) ->
       last = splitted.pop()
 
     if splitted.length > 0
-      result.foldername = pathIdentifier + ellipsis + sep + last + sep
+      if pathIdentifier != ""
+        result.foldername = pathIdentifier + ellipsis + sep + last + sep
+      else
+        result.foldername = last + sep
+        # rtl trick
+        result.ellipsis = "#{sep}#{ellipsis}"
     else
       result.foldername = pathIdentifier + last + sep
 
   else
     splitted = path.split(sep)
     result.filename = splitted.pop()
-    result.foldername = "#{ellipsis}#{sep}" + splitted.pop() + sep
+    if splitted.length
+      result.foldername = splitted.pop() + sep
+      # rtl trick
+      result.ellipsis = "#{sep}#{ellipsis}"
 
   return result
 
@@ -69,23 +77,29 @@ processAllTabs = (revert=false)->
         container = document.createElement("div")
         container.classList.add "smart-tab-name"
 
-        if paths[path].foldername != ""
+        if paths[path].foldername and paths[path].foldername != "/"
           foldernameElement = document.createElement("span")
           foldernameElement.classList.add "folder"
           foldernameElement.innerHTML = paths[path].foldername
           container.appendChild foldernameElement
 
-        filenameElement = document.createElement("span")
-        filenameElement.classList.add "file"
-
         if paths[path].foldername == ""
           filenameElement.classList.add "file-only"
+
+        filenameElement = document.createElement("span")
+        filenameElement.classList.add "file"
+        filenameElement.innerHTML = paths[path].filename
+        container.appendChild filenameElement
 
         if paths[path].filename.match(/^index\.[a-z]+/)
           filenameElement.classList.add "index-filename"
 
-        filenameElement.innerHTML = paths[path].filename
-        container.appendChild filenameElement
+        if paths[path].ellipsis
+          ellipsisElement = document.createElement("span")
+          ellipsisElement.classList.add "ellipsis"
+          ellipsisElement.innerHTML = paths[path].ellipsis
+          container.appendChild ellipsisElement
+
         tab.appendChild container
   return !revert
 

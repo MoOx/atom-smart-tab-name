@@ -15,7 +15,7 @@ you some context.
 
 ### Multiples folder preview
 
-![screenshot](https://github.com/MoOx/atom-smart-tab-name/raw/master/screenshots/multiples-folders.png)
+![screenshot](https://github.com/MoOx/atom-smart-tab-name/raw/master/screenshots/multiples-projects.png)
 
 ## [CHANGELOG](CHANGELOG.md)
 

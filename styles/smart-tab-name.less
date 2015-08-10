@@ -18,9 +18,21 @@
 .smart-tab-name {
   flex: 1;
   display: inline-block;
+
   direction: rtl;
+  /*
+    if you want to change this trick, please update line below
+      # rtl trick
+    in js files
+  */
+
   -webkit-mask: linear-gradient(to right, rgba(0, 0, 0, 0), #000000 1em) no-repeat;
 }
+
+  .smart-tab-name .ellipsis {
+    opacity: .4;
+    font-size: .9em;
+  }
 
   .smart-tab-name .index-filename {
     opacity: .4;
