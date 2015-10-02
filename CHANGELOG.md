@@ -1,3 +1,8 @@
+# 1.0.4 - 2015-10-02
+
+- Fixed: tab name keeps the same when tabs are dragged
+([#7](https://github.com/MoOx/atom-smart-tab-name/issues/7))
+
 # 1.0.3 - 2015-08-10
 
 - Fixed: ellipsis is now placed in before filenames (for long path/filenames)
