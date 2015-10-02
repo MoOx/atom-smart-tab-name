@@ -121,8 +121,7 @@ class SmartTabName
       @disposables.add atom.commands.add 'atom-workspace',
       'smart-tab-name:toggle': @toggle
 
-      panes = atom.workspace.getPanes()
-      for pane in panes
+      for pane in atom.workspace.getPanes()
         @disposables pane.onDidMoveItem ->
           setTimeout processAllTabs, 10
     log "loaded"
