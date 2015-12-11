@@ -115,14 +115,14 @@ class SmartTabName
         setTimeout processAllTabs, 10
       @disposables.add atom.workspace.onDidDestroyPaneItem ->
         setTimeout processAllTabs, 10
-      @disposables.add atom.workspace.onDidAddPane (pane)->
-        @disposables pane.onDidMoveItem ->
+      @disposables.add atom.workspace.onDidAddPane (event) =>
+        @disposables.add event.pane.onDidMoveItem ->
           setTimeout processAllTabs, 10
       @disposables.add atom.commands.add 'atom-workspace',
       'smart-tab-name:toggle': @toggle
 
       for pane in atom.workspace.getPanes()
-        @disposables pane.onDidMoveItem ->
+        @disposables.add pane.onDidMoveItem ->
           setTimeout processAllTabs, 10
     log "loaded"
   toggle: =>
