@@ -1,3 +1,8 @@
+# 1.0.5 - 2015-12-14
+
+- Fixed: panes split error
+([#13](https://github.com/MoOx/atom-smart-tab-name/pull/13))
+
 # 1.0.4 - 2015-10-02
 
 - Fixed: tab name keeps the same when tabs are dragged
